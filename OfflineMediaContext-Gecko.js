@@ -38,9 +38,7 @@
 
         return new Promise(resolve => {
 
-          var recorder, stopped;
-
-          let data, chunks = [];
+          let recorder, stopped = false;
 
           const media = document.createElement("video");
 
@@ -50,7 +48,6 @@
 
 
           media.onpause = e => {
-            //media.onpause = null;
             console.log(e);
             stopped = true;
             recorder.stop();
@@ -72,7 +69,7 @@
               ctx.drawImage(media, 0, 0);
             }
 
-            // (index):76 Uncaught DOMException: Failed to construct 'AudioContext': The number of hardware contexts provided (6) is greater than or equal to the maximum bound (6).
+            // Blink Uncaught DOMException: Failed to construct 'AudioContext': The number of hardware contexts provided (6) is greater than or equal to the maximum bound (6).
             const ac = new AudioContext();
             // create a stream from our AudioContext
             const msd = ac.createMediaStreamDestination();
