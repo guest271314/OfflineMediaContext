@@ -42,3 +42,7 @@ Usage
         
 
       })
+
+Demonstration
+---
+Chromium/Chrome [plnkr](http://plnkr.co/edit/KfP9zP?p=preview)  Firefox [plnkr](http://plnkr.co/edit/KfP9zP?p=preview)
